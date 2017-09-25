@@ -15,7 +15,14 @@ Those are features, as well as the number of bars among many other, the US Censu
 
 Using geographic, demographic and economic information at the county level to train a machine learning model presents some attractive advantages. One of them is its diversity, with areas, population and population densities that span over many order of magnitude, as it can be seen in the histograms of figure 1.
 
+
 <img alt="Histograms of county areas, populations and population densities" src="figures/area_pop_dens_hist.png" width='500'>
+<div style="text-align: center"><sub><b>Figure 4: </b> Histograms of area, population and population density </sub>
+
+An initial analysis of whether is okay to use population, county area, and population density. As it can be seen in the right-most scatter plot of figure 2, the population and the population density are quite correlated.  
+
+
+<img alt="Histograms of county areas, populations and population densities" src="figures/area_pop_dens_scatters.png" width='500'>
 <div style="text-align: center"><sub><b>Figure 4: </b> Histograms of area, population and population density </sub>
 
 ### Some useful references and resources
