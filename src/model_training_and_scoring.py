@@ -35,6 +35,25 @@ def predict_bars(county, state, model, cols):
     return(y_pred, int(y))
 
 
+def geo_id_finder(county, state, df=county_info):
+    if len(state) == 2:
+        state_df = df[df['state_code'] == county.lower().title()]
+    else:
+        state_df = df[df['state_name'] == county.lower().title()]
+    df[df['county_name'] == county.lower().title()]
+
+    # To check if it helps:
+    # df2.iloc[np.where(df2["ALAND_SQMI"] == df2['ALAND_SQMI'].max())]
+
+
+    # state_df.index[state_df['county_name'] == 'Boulder County, CO'].tolist()[0] gives you the index 250
+    # state_df.get_value(250, 'geo_id')    Out[158]: 8013 gives you the geo_id
+
+    #this other needs tunning
+    # select_index = list(np.where(df["county_name"] == 'Boulder County, CO)
+    #  ...: [0])
+    #  ...: df.iloc[select_index]
+
 
 if __name__ == '__main__':
     filename = '../data/2015_toy_sd_1_5_nan_to_min.csv'
